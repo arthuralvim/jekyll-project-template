@@ -1,0 +1,21 @@
+# jekyll settings
+
+markdown: redcarpet
+highlighter: pygments
+port: 9000
+permalink: pretty
+exclude: ['.bowerrc', 'bower.json', 'Rakefile', 'README.md']
+
+# url: "http://username.github.io" # the base hostname & protocol for your site
+# baseurl: ""
+
+# i18n
+
+default_locale: 'pt-BR'
+authorized_locales: ['pt-BR', ]
+
+# sass
+
+sass:
+    sass_dir: _sass
+    # style: compressed
