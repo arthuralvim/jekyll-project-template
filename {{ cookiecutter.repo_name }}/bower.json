@@ -1,5 +1,5 @@
 {
-  "name": "username.github.io",
+  "name": "{{ cookiecutter.repo_name }}",
   "dependencies": {
     "bootstrap": "3.1.0",
     "bootstrap-sass-official": "~3.1.0",

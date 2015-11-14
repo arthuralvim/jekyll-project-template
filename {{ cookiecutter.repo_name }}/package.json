@@ -1,0 +1,13 @@
+{
+  "name": "{{ cookiecutter.repo_name }}-site",
+  "author": "{{ cookiecutter.github_username }}",
+  "version": "0.0.1",
+  "description": "{{ cookiecutter.github_username }} website",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-copy": "^0.0.2",
+    "gulp-uglify": "^1.4.1"
+  },
+  "license": "MIT"
+}

@@ -1,2 +1,2 @@
-username.com
-www.username.com
+{{ cookiecutter.repo_name }}{% raw %}.com
+www.{% endraw %}{{ cookiecutter.repo_name }}{% raw %}.com{% endraw %}

@@ -1,4 +1,4 @@
-require 'i18n'
+{% raw %}require 'i18n'
 
 LOCALE = :"pt-BR"
 
@@ -23,4 +23,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_filter(Jekyll::I18nFilter)
+Liquid::Template.register_filter(Jekyll::I18nFilter){% endraw %}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% raw %}<!DOCTYPE html>
 <html lang="en" class="no-js">
     <head>
         <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -14,4 +14,4 @@
     {% include scripts.html %}
     {% if page.ga_id %}{% include tracking.html ga_id=page.ga_id %}{% endif %}
     </body>
-</html>
+</html>{% endraw %}
