@@ -2,6 +2,7 @@ var gulp    = require('gulp'),
     copy  = require('gulp-copy'),
     clean  = require('gulp-clean'),
     uglify  = require('gulp-uglify'),
+    minifyCss = require('gulp-minify-css'),
     concat  = require('gulp-concat');
 
 var bower_path = 'assets/bower';
@@ -32,6 +33,7 @@ gulp.task('css:plugins', function(){
             bower_path + '/c3/c3.css',
             bower_path + '/animate.css/animate.css'
         ]).pipe(concat('plugins.css'))
+          .pipe(minifyCss())
           .pipe(gulp.dest('assets/css/'));
 });
 
