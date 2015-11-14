@@ -4,7 +4,7 @@ markdown: redcarpet
 highlighter: pygments
 port: 9000
 permalink: pretty
-exclude: ['.bowerrc', '.gitignore', '.travis.yml', 'assets/bower',
+exclude: ['.bowerrc', '.gitignore', '.travis.yml', 'assets/bower', 'assets/js-src'
     'bower.json', 'circle.yml', 'gulpfile.js', 'node_modules', 'packages.json',
     'Rakefile', 'README.md']
 
