@@ -17,7 +17,18 @@ gulp.task('js:app', function(){
 gulp.task('js:plugins', function(){
     return gulp.src([
             bower_path + '/jquery/dist/jquery.js',
-            bower_path + '/bootstrap/js/**/*.js',
+            bower_path + '/bootstrap/js/affix.js',
+            bower_path + '/bootstrap/js/alert.js',
+            bower_path + '/bootstrap/js/button.js',
+            bower_path + '/bootstrap/js/carousel.js',
+            bower_path + '/bootstrap/js/collapse.js',
+            bower_path + '/bootstrap/js/dropdown.js',
+            bower_path + '/bootstrap/js/modal.js',
+            bower_path + '/bootstrap/js/scrollspy.js',
+            bower_path + '/bootstrap/js/tab.js',
+            bower_path + '/bootstrap/js/tooltip.js',
+            bower_path + '/bootstrap/js/popover.js',
+            bower_path + '/bootstrap/js/transition.js',
             bower_path + '/holderjs/holder.js',
             bower_path + '/underscore/underscore.js',
             bower_path + '/d3/d3.js',
@@ -29,11 +40,12 @@ gulp.task('js:plugins', function(){
 
 gulp.task('css:plugins', function(){
     return gulp.src([
+            bower_path + '/bootstrap/dist/css/bootstrap.css',
             bower_path + '/font-awesome/css/font-awesome.css',
             bower_path + '/c3/c3.css',
             bower_path + '/animate.css/animate.css'
         ]).pipe(concat('plugins.css'))
-          .pipe(minifyCss())
+          .pipe(minifyCss({keepSpecialComments: 0}))
           .pipe(gulp.dest('assets/css/'));
 });
 
@@ -43,7 +55,6 @@ gulp.task('fonts:plugins', function(){
         bower_path + '/font-awesome/fonts/**/*.{otf,ttf,woff,woff2,eof,svg}'
         ]).pipe(gulp.dest('assets/fonts/'));
 });
-
 
 gulp.task('clean:site', function(){
     return gulp.src('_site', {read: false})
@@ -75,7 +86,12 @@ gulp.task('clean:fonts', function(){
                .pipe(clean());
 });
 
+gulp.task('clean:css', function(){
+    return gulp.src('assets/css/plugins.css', {read: false})
+               .pipe(clean());
+});
+
 gulp.task('default', ['js:app', 'js:plugins', 'css:plugins', 'fonts:plugins']);
 
-gulp.task('clean', ['clean:site', 'clean:js', 'clean:fonts', 'clean:npm',
-                    'clean:bower', 'clean:sass']);
+gulp.task('clean', ['clean:site', 'clean:js', 'clean:css', 'clean:fonts',
+                    'clean:sass']);

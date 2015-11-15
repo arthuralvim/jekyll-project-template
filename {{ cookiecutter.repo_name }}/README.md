@@ -1,41 +1,66 @@
-# USERNAME
+# {{ cookiecutter.repo_name }}
 
-Site da username hospedado em [username.com](http://www.username.com) .
+This website is hosted on [{{ cookiecutter.repo_name }}.com](http://www.{{ cookiecutter.repo_name }}.com) .
 
 
-### Configuração e instalação das dependências
-É necessário instalar primeiramente o Ruby e o NPM.
+## Tools
 
-Para instalar o Jekyll
-```
+* Ruby and NPM are required.
+
+### Jekyll
+
+```bash
 $ gem install jekyll
-```
-
-Para instalar o Gulp
-```
-$ npm install -g gulp
-```
-
-```
-$ git clone git@github.com:username/username.git
-$ cd username
 ```
 
 ### Gulp
 
+```bash
+$ npm install -g gulp
 ```
-# Para executar tarefas do Gulp. (Basicamente, tarefas relacionadas a js e css)
+
+### Bower
+
+```bash
+$ npm install -g bower
+```
+
+## Requirements
+
+```bash
+$ git clone git@github.com:{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git
+$ cd {{ cookiecutter.repo_name }}
+```
+
+### NPM dependencies
+
+```bash
+$ npm install
+```
+
+### Bower dependencies
+
+```bash
+$ bower install
+```
+
+## Running
+
+### Gulp
+
+```bash
+# Execute Gulp's tasks. (Basically, It will minify your js and css.)
 $ gulp
 ```
 
 ### Jekyll
 
-```
+```bash
 $ jekyll serve
 ```
 
-### Para visualizar no navegador:
+### Browser:
 
-```
+```bash
 $ open http://localhost:4000
 ```

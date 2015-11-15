@@ -2,10 +2,10 @@
 
 markdown: redcarpet
 highlighter: pygments
-port: 9000
+port: 4000
 permalink: pretty
-exclude: ['.bowerrc', '.gitignore', '.travis.yml', 'assets/bower', 'assets/js-src'
-    'bower.json', 'circle.yml', 'gulpfile.js', 'node_modules', 'packages.json',
+exclude: ['.bowerrc', '.gitignore', '.travis.yml', 'assets/bower', 'assets/js-src',
+    'bower.json', 'circle.yml', 'gulpfile.js', 'node_modules', 'package.json',
     'Rakefile', 'README.md']
 
 # url: "http://{{ cookiecutter.repo_name }}.github.io" # the base hostname & protocol for your site
