@@ -1,5 +1,5 @@
 ======================
-jekyll-project-template (still WIP)
+jekyll-project-template
 ======================
 
 A Cookiecutter compliant template for a basic Jekyll project.
